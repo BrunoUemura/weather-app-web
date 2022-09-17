@@ -1,31 +1,21 @@
-import { useState } from "react";
-import "./styles/App.scss";
+import './styles/App.scss';
 
-import { CityContext } from "./contexts/CityContext";
-import Navbar from "./components/Navbar";
-import Weather from "./components/Weather";
-import { backendResponse } from "./mocks/BackendResponse";
-import { IWeatherType } from "./utils/IWeatherType";
-import { defineBackgroundImage } from "./utils/DefineBackgroundImage";
+import { useState } from 'react';
+
+import Search from './components/Search';
+import Weather from './components/Weather';
+import { CityContext } from './contexts/CityContext';
+import { backendResponse } from './mocks/BackendResponse';
+import { IWeatherType } from './utils/IWeatherType';
 
 export default function App() {
-  const [city, setCity] = useState<string>("Calgary");
+  const [city, setCity] = useState<string>('Calgary');
   const [weather, setWeather] = useState<IWeatherType>(backendResponse);
-
-  const backgroundImage = defineBackgroundImage(
-    weather.localTime,
-    weather.condition
-  );
 
   return (
     <div className="App">
-      {/* <img
-        className="AppImage"
-        src={backgroundImage}
-        alt="Weather Background"
-      /> */}
       <CityContext.Provider value={{ city, setCity, weather, setWeather }}>
-        <Navbar />
+        <Search />
         <Weather {...weather} />
       </CityContext.Provider>
     </div>

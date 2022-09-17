@@ -1,18 +1,17 @@
-import "./styles.scss";
-import { useContext, useEffect } from "react";
-import { CityContext } from "../../contexts/CityContext";
-import ClearNight from "../../assets/night-clear.jpg";
-import { getWeatherDetails } from "../../services/WeatherAPI";
-import { IWeatherType } from "../../utils/IWeatherType";
+import './styles.scss';
+
+import { useContext } from 'react';
+
+import { CityContext } from '../../contexts/CityContext';
+import { IWeatherType } from '../../utils/IWeatherType';
+import Temperature from './Temperature';
 
 export default function Weather(props: IWeatherType) {
   const { city, setWeather } = useContext(CityContext);
 
   return (
     <div className="WeatherContainer">
-      <div className="WeatherLeftInfo">
-        <h1>{props.temperatureInC}</h1>
-      </div>
+      <Temperature temperatureInC={props.temperatureInC} />
 
       <div className="WeatherRightInfo">
         <div className="WeatherRegionInfo">
@@ -26,7 +25,6 @@ export default function Weather(props: IWeatherType) {
           <p>Feels like: {props.feelsLikeInC}</p>
         </div>
       </div>
-      
     </div>
   );
 }

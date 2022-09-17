@@ -1,0 +1,35 @@
+.search-container {
+  width: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__input {
+    min-width: 80%;
+
+    border: none;
+    outline: none;
+
+    padding: 0.8rem;
+    padding-left: 20px;
+    text-transform: lowercase;
+    font-size: medium;
+    letter-spacing: 1px;
+  }
+
+  &__button {
+    min-width: 20%;
+    padding: 0.8rem;
+
+    border: none;
+
+    cursor: pointer;
+
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    background-color: #0f62fe;
+    color: #fff;
+  }
+}
