@@ -2,6 +2,7 @@ export type IWeatherType = {
   name: string;
   region: string;
   country: string;
+  localDate: string;
   localTime: string;
   temperatureInC: number;
   temperatureInF: number;
