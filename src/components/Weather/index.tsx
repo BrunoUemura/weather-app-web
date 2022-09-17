@@ -4,6 +4,7 @@ import { useContext } from 'react';
 
 import { CityContext } from '../../contexts/CityContext';
 import { IWeatherType } from '../../utils/IWeatherType';
+import GeoDetails from './GeoDetails';
 import Temperature from './Temperature';
 
 export default function Weather(props: IWeatherType) {
@@ -11,13 +12,20 @@ export default function Weather(props: IWeatherType) {
 
   return (
     <div className="WeatherContainer">
-      <Temperature temperatureInC={props.temperatureInC} />
+      <Temperature
+        condition={props.condition}
+        temperatureInC={props.temperatureInC}
+        temperatureInF={props.temperatureInF}
+      />
 
       <div className="WeatherRightInfo">
-        <div className="WeatherRegionInfo">
-          <h1>{`${props.name}, ${props.country}`}</h1>
-          <h2>{props.localTime}</h2>
-        </div>
+        <GeoDetails
+          name={props.name}
+          region={props.region}
+          country={props.country}
+          localDate={props.localDate}
+          localTime={props.localTime}
+        />
 
         <div className="WeatherDetails">
           <h1>{props.condition}</h1>
