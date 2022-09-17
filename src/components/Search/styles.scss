@@ -6,21 +6,21 @@
   align-items: center;
 
   &__input {
-    min-width: 80%;
+    width: 80%;
+    height: 40px;
 
     border: none;
     outline: none;
 
-    padding: 0.8rem;
-    padding-left: 20px;
+    text-align: center;
     text-transform: lowercase;
     font-size: medium;
     letter-spacing: 1px;
   }
 
   &__button {
-    min-width: 20%;
-    padding: 0.8rem;
+    width: 20%;
+    height: 40px;
 
     border: none;
 
@@ -31,5 +31,21 @@
 
     background-color: #0f62fe;
     color: #fff;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .search-container {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+
+    &__input {
+      width: 100%;
+    }
+
+    &__button {
+      width: 100%;
+    }
   }
 }
