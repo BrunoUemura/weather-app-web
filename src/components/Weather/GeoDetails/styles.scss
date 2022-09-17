@@ -1,0 +1,22 @@
+.weather-geo-details {
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+
+  padding-bottom: 10px;
+  border-bottom: 1px solid #aaaaaa;
+
+  &__location {
+    font-size: large;
+    font-weight: 600;
+  }
+
+  &__local_date {
+    color: #636363;
+  }
+
+  &__local_time {
+    font-weight: 600;
+  }
+}
