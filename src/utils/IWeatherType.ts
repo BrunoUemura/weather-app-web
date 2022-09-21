@@ -1,4 +1,9 @@
-export type IWeatherType = {
+export interface IWeatherProps {
+  weather: IWeatherType;
+  weatherReady: boolean;
+}
+
+export interface IWeatherType {
   name: string;
   region: string;
   country: string;
@@ -14,9 +19,9 @@ export type IWeatherType = {
   };
   humidity: number;
   forecast?: Forecast[];
-};
+}
 
-type Forecast = {
+interface Forecast {
   date: string;
   maxTemperatureInC: number;
   maxTemperatureInF: number;
@@ -28,4 +33,4 @@ type Forecast = {
     text: string;
     icon: string;
   };
-};
+}
