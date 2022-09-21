@@ -28,7 +28,7 @@ export default function App() {
   return (
     <div className="App">
       <CityContext.Provider value={{ city, setCity, weather, setWeather }}>
-        <Search />
+        <Search setWeatherReady={setWeatherReady} />
         <Weather weather={weather} weatherReady={weatherReady} />
       </CityContext.Provider>
     </div>

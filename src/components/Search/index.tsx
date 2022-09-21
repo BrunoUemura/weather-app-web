@@ -3,13 +3,15 @@ import './styles.scss';
 import { useContext, useState } from 'react';
 
 import { CityContext } from '../../contexts/CityContext';
+import { ISearchProps } from './types';
 
-export default function Search() {
+export default function Search({ setWeatherReady }: ISearchProps) {
   const { setCity } = useContext(CityContext);
   const [search, setSearch] = useState('');
 
   const handleSearchCity = () => {
     setCity(search);
+    setWeatherReady(false);
   };
 
   return (
