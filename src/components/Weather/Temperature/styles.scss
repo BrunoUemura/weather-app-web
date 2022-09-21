@@ -2,12 +2,13 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 
-  width: 50%;
-
   div {
     display: flex;
-    justify-content: center;
     align-items: center;
+  }
+
+  &__condition {
+    justify-content: center;
   }
 
   &__details {
@@ -39,6 +40,14 @@
         background-color: #97bbff;
         color: #fff;
       }
+    }
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .weather-temperature {
+    &__current {
+      font-size: 35px;
     }
   }
 }

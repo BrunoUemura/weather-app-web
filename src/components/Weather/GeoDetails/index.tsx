@@ -16,8 +16,11 @@ export default function GeoDetails({
   return (
     <div className="weather-geo-details">
       <span className="weather-geo-details__location">{`${name}, ${region} - (${country})`}</span>
-      <span className="weather-geo-details__local_date">{formattedDate}</span>
-      <span className="weather-geo-details__local_time">{localTime}</span>
+
+      <div className="weather-geo-details__datetime">
+        <span className="weather-geo-details__datetime_date">{formattedDate}</span>
+        <span className="weather-geo-details__datetime_time">{localTime}</span>
+      </div>
     </div>
   );
 }

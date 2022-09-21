@@ -13,11 +13,17 @@
     font-weight: 600;
   }
 
-  &__local_date {
-    color: #636363;
-  }
+  &__datetime {
+    display: flex;
+    flex-direction: column;
 
-  &__local_time {
-    font-weight: 600;
+    &_date {
+      color: #636363;
+    }
+
+    &_time {
+      text-align: end;
+      font-weight: 600;
+    }
   }
 }

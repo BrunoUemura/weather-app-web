@@ -1,3 +1,5 @@
+import './styles.scss';
+
 import { IWeatherDetailsProps } from './types';
 
 export default function WeatherDetails({
@@ -7,9 +9,9 @@ export default function WeatherDetails({
 }: IWeatherDetailsProps) {
   return (
     <div className="weather-details">
-      <h1>{condition}</h1>
-      <p>Humiduty: {humidity}</p>
-      <p>Feels like: {feelsLikeInC}</p>
+      <span className="weather-details__condition">{condition}</span>
+      <span>Humiduty: {humidity}</span>
+      <span>Feels like: {feelsLikeInC}</span>
     </div>
   );
 }

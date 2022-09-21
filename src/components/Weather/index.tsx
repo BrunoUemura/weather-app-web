@@ -12,6 +12,14 @@ export default function Weather(props: IWeatherType) {
 
   return (
     <div className="weather-container">
+      <GeoDetails
+        name={props.name}
+        region={props.region}
+        country={props.country}
+        localDate={props.localDate}
+        localTime={props.localTime}
+      />
+
       <Temperature
         condition={props.condition.text}
         conditionImage={props.condition.icon}
@@ -19,22 +27,12 @@ export default function Weather(props: IWeatherType) {
         temperatureInF={props.temperatureInF}
       />
 
-      <div className="weather-container__right_info">
-        <GeoDetails
-          name={props.name}
-          region={props.region}
-          country={props.country}
-          localDate={props.localDate}
-          localTime={props.localTime}
-        />
-
-        <WeatherDetails
-          condition={props.condition.text}
-          humidity={props.humidity}
-          feelsLikeInC={props.feelsLikeInC}
-          feelsLikeInF={props.feelsLikeInF}
-        />
-      </div>
+      <WeatherDetails
+        condition={props.condition.text}
+        humidity={props.humidity}
+        feelsLikeInC={props.feelsLikeInC}
+        feelsLikeInF={props.feelsLikeInF}
+      />
     </div>
   );
 }
