@@ -13,7 +13,7 @@ export type IWeatherType = {
     icon: string;
   };
   humidity: number;
-  forecast: Forecast[];
+  forecast?: Forecast[];
 };
 
 type Forecast = {
