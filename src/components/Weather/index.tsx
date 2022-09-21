@@ -1,24 +1,25 @@
 import './styles.scss';
 
-import { useContext } from 'react';
-
-import { CityContext } from '../../contexts/CityContext';
+// import { useContext } from 'react';
+// import { CityContext } from '../../contexts/CityContext';
 import { IWeatherType } from '../../utils/IWeatherType';
 import GeoDetails from './GeoDetails';
 import Temperature from './Temperature';
+import WeatherDetails from './WeatherDetails';
 
 export default function Weather(props: IWeatherType) {
-  const { city, setWeather } = useContext(CityContext);
+  // const { city, setWeather } = useContext(CityContext);
 
   return (
-    <div className="WeatherContainer">
+    <div className="weather-container">
       <Temperature
-        condition={props.condition}
+        condition={props.condition.text}
+        conditionImage={props.condition.icon}
         temperatureInC={props.temperatureInC}
         temperatureInF={props.temperatureInF}
       />
 
-      <div className="WeatherRightInfo">
+      <div className="weather-container__right_info">
         <GeoDetails
           name={props.name}
           region={props.region}
@@ -27,11 +28,12 @@ export default function Weather(props: IWeatherType) {
           localTime={props.localTime}
         />
 
-        <div className="WeatherDetails">
-          <h1>{props.condition}</h1>
-          <p>Humiduty: {props.humidity}</p>
-          <p>Feels like: {props.feelsLikeInC}</p>
-        </div>
+        <WeatherDetails
+          condition={props.condition.text}
+          humidity={props.humidity}
+          feelsLikeInC={props.feelsLikeInC}
+          feelsLikeInF={props.feelsLikeInF}
+        />
       </div>
     </div>
   );

@@ -8,7 +8,10 @@ export const backendResponse = {
   temperatureInF: -6,
   feelsLikeInC: -26,
   feelsLikeInF: -15,
-  condition: 'Partly sunny',
+  condition: {
+    text: 'Partly cloudy',
+    icon: '//cdn.weatherapi.com/weather/64x64/day/116.png',
+  },
   humidity: 77,
   forecast: [
     {

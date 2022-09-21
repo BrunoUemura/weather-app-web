@@ -1,6 +1,6 @@
 .weather-temperature {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
 
   width: 50%;
 
@@ -10,11 +10,17 @@
     align-items: center;
   }
 
+  &__details {
+    flex-direction: column;
+  }
+
   &__current {
     font-size: 45px;
   }
 
   &__scale_options {
+    justify-content: left;
+
     button {
       cursor: pointer;
 

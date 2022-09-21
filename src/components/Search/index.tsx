@@ -17,7 +17,7 @@ export default function Search() {
       <input
         className="search-container__input"
         type="text"
-        placeholder="e.g. Moncton"
+        placeholder="e.g. Campinas"
         onChange={(event) => {
           setSearch(event.target.value);
         }}

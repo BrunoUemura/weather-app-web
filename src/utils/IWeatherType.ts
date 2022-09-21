@@ -8,7 +8,10 @@ export type IWeatherType = {
   temperatureInF: number;
   feelsLikeInC: number;
   feelsLikeInF: number;
-  condition: string;
+  condition: {
+    text: string;
+    icon: string;
+  };
   humidity: number;
   forecast: Forecast[];
 };

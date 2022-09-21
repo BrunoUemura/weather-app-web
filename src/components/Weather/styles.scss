@@ -1,4 +1,4 @@
-.WeatherContainer {
+.weather-container {
   padding: 0 20px;
   margin-top: 80px;
   width: 50%;
@@ -9,39 +9,14 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-}
 
-.WeatherLeftInfo {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  width: 50%;
-}
-
-.WeatherRightInfo {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-
-  width: 50%;
-
-  .WeatherRegionInfo {
+  &__right_info {
+    height: 100%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    width: 50%;
   }
-}
-
-.WeatherBackground {
-  width: 100vw;
-  height: 100vh;
-
-  position: fixed;
-  z-index: -1;
-}
-
-h1 {
-  color: rgb(0, 0, 0);
 }
